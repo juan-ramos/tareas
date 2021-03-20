@@ -1,0 +1,11 @@
+print("Calcularemos el promedio de un alumno con cinco calificaciones\n")
+x = 0
+suma = 0
+print("INTRODUCE LAS CALIFICACIONES\n")
+while (x<5):
+        calif=int(input("Calificación No. "+ str(x+1) + " = "))
+        suma = suma + calif
+        x=x+1
+prom = suma/5
+print("\nLa suma de las calificaciones es: ",suma)
+print("El promedio es: ",prom)
