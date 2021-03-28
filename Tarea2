@@ -1,0 +1,81 @@
+#Menu para elegir la figura y qué se desea calcular
+print("El siguiente programa calcula el perímetro y área de la figura que elijas\n")
+print("\nOpciones de figuras:\n1. Triángulo\n2. Cuadrado\n3. Rectángulo\n4. Círculo\n5. Rombo")
+op1 = int(input("\nIntroduce el número de la figura seleccionada >>> "))
+print("\n¿Qué deseas calcular?\na. Área\nb. Perímetro\nc. Área y Perímetro")
+op2 = str(input("\nIntroduce la letra de la opción que deseas calcular "))
+
+#Establecer las variables área y perímetro en cero
+area = 0
+perimetro = 0
+
+#Calcula Área y/o Perímetro del triángulo.
+if (op1 == 1):
+    if (op2 == "a" or op2 == "c"):
+        print("\nPara calcular el ÁREA debes conocer la base y la altura del triángulo\n")
+        base = float(input("Base >>> "))
+        altura = float(input("Altura >>> "))
+        area = (base*altura)/2
+    if (op2 == "b" or op2 == "c"):
+        print("\nPara calcular el PERÍMETRO debes conocer la medida de los tres lados")
+        lado1 = float(input("Cuál es la medida del lado 1 >>> "))
+        lado2 = float(input("Cuál es la medida del lado 2 >>> "))
+        lado3 = float(input("Cuál es la medida del lado 3 >>> "))
+        perimetro = lado1+lado2+lado3        
+    elif(op2 != "a" and op2 != "b" and op2 != "c"):
+        print("La opción no es válida\nElige entre las opciones a, b, c")
+
+#Calcula Área y/o Perímetro del cuadrado.
+elif (op1 == 2):
+    lado1 = float(input("\nNecesitas conocer la medidad de un lado del cuadrado\nLado >>> "))
+    if (op2 == "a" or op2 == "c"):  
+        area = lado1**2
+    if (op2 == "b" or op2 == "c"):
+        perimetro = 4*lado1        
+    elif(op2 != "a" and op2 != "b" and op2 != "c"):
+        print("La opción no es válida\nElige entre las opciones a, b, c")
+
+#Calcula Área y/o Perímetro del rectángulo.
+elif (op1 == 3):
+    print("\nPara hacer el cálculo, necesitas conocer la medidad de la base y la altura del rectángulo\n")
+    base = float(input("Base >>> "))
+    altura = float(input("Altura >>> "))
+    if (op2 == "a" or op2 == "c"):  
+        area = base*altura
+    if (op2 == "b" or op2 == "c"):
+        perimetro = 2*base + 2*altura        
+    elif(op2 != "a" and op2 != "b" and op2 != "c"):
+        print("La opción no es válida\nElige entre las opciones a, b, c")
+
+#Calcula Área y/o Perímetro del círculo.
+elif (op1 == 4):
+    print("\nPara hacer el cálculo, necesitas conocer el radio del círculo\n")
+    radio = float(input("Radio >>> "))
+    if (op2 == "a" or op2 == "c"):  
+        area = 3.1416*radio**2
+    if (op2 == "b" or op2 == "c"):
+        perimetro = 2*3.1416*radio        
+    elif(op2 != "a" and op2 != "b" and op2 != "c"):
+        print("La opción no es válida\nElige entre las opciones a, b, c")
+
+#Calcula Área y/o Perímetro del rombo.
+elif (op1 == 5):
+    if (op2 == "a" or op2 == "c"):
+        print("\nPara calcular el ÁREA debes conocer la diagonal mayor y la diagonal menor del rombo\n")
+        diagonalMay = float(input("Diagonal Mayor >>> "))
+        diagonalMen = float(input("Diagonal Menor >>> "))
+        area = (diagonalMay*diagonalMen)/2
+    if (op2 == "b" or op2 == "c"):
+        print("\nPara calcular el PERÍMETRO debes conocer la medida de su lateral")
+        lateral = float(input("Cuál es la medida de su lateral >>> "))
+        perimetro = 4*lateral        
+    elif(op2 != "a" and op2 != "b" and op2 != "c"):
+        print("La opción no es válida\nElige entre las opciones a, b, c")
+
+elif(op1 != 1 and op1 != 2 and op1 != 3 and op1 != 4 and op1 != 5):
+    print("\nIntroduce una opción válida para seleccionar la figura")
+    
+if (op2 == "a" or op2 == "c"):
+    print("\nEl área de la figura es: ",area,"unidades cuadradas")
+elif (op2 == "b" or op2 == "c"):
+    print("\nEl perímetro de la figura es ",perimetro,"unidades")
