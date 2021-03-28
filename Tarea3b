@@ -1,0 +1,13 @@
+# El programa imprime la sumatoria de los números positivos
+# se detiene cuando el usuario introduce el cero.
+print("Introduce números enteros \nPara terminar introduce el cero\n")
+
+n = 1
+suma = 0
+
+while (n != 0):
+    n = int(input("Ingresa un número >>> "))
+    if (n > 0):
+        suma += n
+
+print("\nLa sumatoria de los números positivos es",suma)
