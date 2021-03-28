@@ -1,0 +1,17 @@
+# El programa imprime el número mayor cuando el usuario introduce varios
+# se detiene cuando el usuario introduce el cero.
+print("Introduce números enteros cualesquiera\nPara terminar introduce el cero\n")
+
+n = 1
+comp = 0
+may = 0
+
+while (n != 0):
+    n = int(input("Ingresa un número >>> "))
+    if (comp < n):
+        may = n
+    elif (comp > n):
+        may = comp
+    comp = may
+
+print("el número mayor es",may)
