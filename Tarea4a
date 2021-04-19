@@ -1,0 +1,9 @@
+#Ingresa 5 palabras e imprime en orden inverso
+lista1 = []
+i = 0
+while i < 5:
+    x = str(input("Ingresa la palabra "+ str(i+1) + ">>> "))
+    lista1.insert(i,x)
+    i = i + 1
+lista1.reverse()
+print(lista1)
