@@ -1,0 +1,22 @@
+#Ingresar números en dos listas 
+# y calcular la suma en una tercer lista.
+#Ejercicio 7 de la lista de ejercicios
+lista1 = []
+lista2 = []
+lista3 = []
+i = 0
+while i<5:
+    n = int(input("Para la lista 1, introduce el valor " + str(i+1)+ ">>> "))
+    lista1.insert(i,n)
+    i += 1
+
+i = 0
+while i<5:
+    n = int(input("Para la lista 2, introduce el valor " + str(i+1)+ ">>> "))
+    lista2.insert(i,n)
+    lista3.insert(i,lista1[i]+lista2[i])
+    i += 1
+
+print("Elementos de la lisa 1: ", lista1)
+print("Elementos de la lisa 2: ", lista2)
+print("Elementos de la lisa 3: ", lista3)
