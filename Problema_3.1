@@ -1,0 +1,26 @@
+palabra = input("Ingresa una palabra >>> ")
+print("Tu palabra es", palabra)
+palabra = palabra.lower()
+pal = []
+a = 0
+e = 0
+i = 0
+o = 0
+u = 0
+for x in range(len(palabra)):
+    pal.append(palabra[x])
+    if pal[x] == 'a' or pal[x] == 'á':
+        a += 1
+    elif pal[x] == 'e' or pal[x] == 'é':
+        e += 1
+    elif pal[x] == 'i' or pal[x] == 'í':
+        i += 1
+    elif pal[x] == 'o' or pal[x] == 'ó':
+        o += 1
+    elif pal[x] == 'u' or pal[x] == 'ú':
+        u += 1
+print("La letra a se repite ", a, " veces")
+print("La letra e se repite ", e, " veces")
+print("La letra i se repite ", i, " veces")
+print("La letra o se repite ", o, " veces")
+print("La letra u se repite ", u, " veces")
