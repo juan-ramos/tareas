@@ -1,0 +1,12 @@
+def calculainteres (inversion, interes, anios):
+    x = 1
+    while x <= anios:
+        capital = inversion*(1+interes/100)
+        inversion = capital
+        x += 1
+    print ("El capital obtendio es:", round(capital,2))
+
+inversion = float(input("¿Qué cantidad vas a invertir? >>> "))
+interes = float(input("¿Cuál es el interés anual? >>> "))
+anios = int(input("¿Por cuántos años invertirás? >>> "))
+calculainteres(inversion, interes, anios)
