@@ -1,0 +1,23 @@
+def descuento(producto, precio):
+    if producto == "manzana":
+        precio = precio*0.85
+    elif producto == "papa":
+        precio = precio*0.75
+    elif producto == "cilantro":
+        precio = precio*0.88
+    elif producto == "elotes":
+        precio = precio*0.86
+    return precio
+
+def iva(precio):
+    precio = precio*1.16
+    return precio
+
+print("Descuentos de la semana: Manzanas 15% - Papa 25% - Cilantro 12% - Elotes 14%\n")
+print("Producto\tPrecio\tC/desc\tCon IVA")
+print("Manzana\t\t$ 25\t$",round(descuento("manzana",25),1),"\t$",round(iva(descuento("manzana",25)),1))
+print("Papa\t\t$ 36\t$",round(descuento("papa",25),1),"\t$",round(iva(descuento("papa",25)),1))
+print("Cilantro\t$ 22\t$",round(descuento("cilantro",22),1),"\t$",round(iva(descuento("cilantro",22)),1))
+print("Elotes\t\t$ 15\t$",round(descuento("elotes",15),1),"\t$",round(iva(descuento("elotes",15)),1))
+print("Jamón\t\t$ 33\tN/A\t$",round(iva(33),1))
+print("Queso\t\t$ 75\tN/A\t$",round(iva(75),1))
